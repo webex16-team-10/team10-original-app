@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 import HomeView from "../views/HomeView.vue"
-
+import page3View from "@/views/page3View.vue"
 const routes = [
   {
     path: "/",
@@ -17,10 +17,9 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/title",
-    name: "title",
-    component: () =>
-      import(/* webpackChunkName: "title" */ "../views/TitleView.vue"),
+    path: "/page3View",
+    name: "page3View",
+    component: page3View,
   },
 ]
 
