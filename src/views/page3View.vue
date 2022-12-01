@@ -2,8 +2,14 @@
   <title>Question2</title>
   <h1>緑色を表示せよ</h1>
   <h2>ヒント：回答欄にスペルを入力すると色が変化するぞ</h2>
-  <label>解答欄<input type="text" size="40" /></label>
-  <button>回答</button>
+  <section id="page3">
+    <label>解答欄<input type="text" size="40" /></label>
+    <button v-on:click="next">回答</button>
+    <div v-if="answer === 'mousemove'">
+      <h3>正解!</h3>
+      <button v-on:click="Page3commentaryView">次へ</button>
+    </div>
+  </section>
   <div class="app">
     <p>rgba( {{ red }}, {{ green }}, 200, 0.5 )</p>
     <div
@@ -12,6 +18,7 @@
       v-on:click="pickColor"
       v-bind:style="{ backgroundColor: `rgba(${red}, ${green}, 200, 0.5)` }"
     ></div>
+
     <div class="colors-container">
       <div class="mini-palette"></div>
     </div>
@@ -27,9 +34,15 @@ export default {
       colors: [
         // { red: 0, green: 0 }
       ],
+      answer: false,
     }
   },
   methods: {
+    next: function () {
+      this.answer = true
+      this.answer = "mousemove"
+    },
+
     changeColor(e) {
       this.red = e.offsetX
       this.green = e.offsetY
@@ -44,6 +57,9 @@ export default {
     showColor(color) {
       this.red = color.red
       this.green = color.green
+    },
+    Page3commentaryView() {
+      this.$router.push("/")
     },
   },
   computed: {
