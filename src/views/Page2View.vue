@@ -1,6 +1,7 @@
 <template>
-  <h1>クイズ</h1>
-  <div class="app">
+  <div class="Page2View">
+    <title>Question1</title>
+    <h1>クイズ</h1>
     <h2>Q. {{ quiz.text }}</h2>
     <img class="quiz-image" src="@/assets/emperor.png" alt="quiz.text" />
     <div class="container">
@@ -13,9 +14,7 @@
       </button>
     </div>
     <div>{{ feedback }}</div>
-    <div class="link-next-page">
-      <router-link to="/Page4CommentaryView_link">解説ページへ</router-link>
-    </div>
+    <button v-on:click="linknextpage">解説ページへ</button>
   </div>
 </template>
 
@@ -31,15 +30,18 @@ export default {
             text: "マレーヒヨケザル",
             feedback:
               "残念！マレーヒヨケザルは、ムササビのように飛ぶことができる動物です。",
+            answer: false,
           },
           {
             text: "アカウアカリ",
             feedback: "残念！アカウアカリは、真っ赤な顔が特徴的な動物です。",
+            answer: false,
           },
           {
             text: "エンペラータマリン",
             feedback:
               "正解！エンペラータマリンは、皇帝のような髭が特徴的な動物です。",
+            answer: true,
           },
         ],
       },
@@ -48,6 +50,10 @@ export default {
   methods: {
     choiced(choice) {
       this.feedback = choice.feedback
+    },
+
+    linknextpage() {
+      this.$router.push("/Page2Commentary")
     },
   },
 }
@@ -75,7 +81,7 @@ export default {
   padding: 1em;
   justify-content: space-around;
 }
-.link-next-page {
+.linknextpage {
   display: flex;
   height: 2em;
   width: 400px;

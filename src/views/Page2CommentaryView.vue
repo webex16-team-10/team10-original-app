@@ -1,16 +1,22 @@
 <template>
-  <h1>解説</h1>
-  <div class="app">
-    <img
-      class="commentary-image"
-      src="@/assets/commentary.png"
-      alt="quiz.text"
-    />
-    <div class="container"></div>
+  <div class="Page2Commentary">
+    <title>Quiz解説</title>
+    <h1>Onclickについて</h1>
+    <h2>ボタンをクリックすると指定した文章が表示されます。</h2>
+    <button v-on:click="page3">次へ</button>
+    >
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    page3() {
+      this.$router.push("/Page3View")
+    },
+  },
+}
+</script>
 
 <style>
 .app {
