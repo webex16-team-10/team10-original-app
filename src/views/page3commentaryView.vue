@@ -8,7 +8,7 @@
 export default {
   methods: {
     page4() {
-      this.$router.push("/")
+      this.$router.push("/page4")
     },
   },
 }
