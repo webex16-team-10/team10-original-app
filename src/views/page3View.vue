@@ -1,7 +1,7 @@
 <template>
   <title>Question2</title>
-  <h1>緑色を表示せよ</h1>
-  <h2>ヒント：回答欄にスペルを入力すると色が変化するぞ</h2>
+  <h1>パスワードを探せ</h1>
+  <h2>ヒント：緑色を表示せよ</h2>
   <section id="page3">
     <label>解答欄<input type="text" size="40" /></label>
     <button v-on:click="next">回答</button>
@@ -16,25 +16,34 @@
       class="palette"
       v-on:mousemove="changeColor"
       v-on:click="pickColor"
-      v-bind:style="{ backgroundColor: `rgba(${red}, ${green}, 200, 0.5)` }"
-    ></div>
+      v-bind:style="{
+        backgroundColor: `rgba(${red}, ${green}, 200, 0.5)`,
+      }"
+    >
+      <p class="keyword">'mousemove'</p>
+    </div>
 
     <div class="colors-container">
       <div class="mini-palette"></div>
+      <input v-model.number="age" type="number" id="name" />
     </div>
   </div>
 </template>
 
 <script>
+//import { assertClassPrivateMethod } from '@babel/types'
+
 export default {
   data() {
     return {
       red: 0,
       green: 0,
+      //arpha: 0,
       colors: [
         // { red: 0, green: 0 }
       ],
       answer: false,
+      keyword: false,
     }
   },
   methods: {
