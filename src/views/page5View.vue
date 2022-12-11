@@ -3,7 +3,7 @@
   <h1>以下のボタンを使って、 255を表示せよ</h1>
   <h2>*数字を出せたら、それをクリックしてね</h2>
   <div id="count">
-    <span v-on:click="keynumber" v-if="answer == '255'">
+    <span v-if="answer">
       <h2>正解!</h2>
       <button v-on:click="Page5commentaryView">次へ</button> </span
     >{{ num }}
@@ -18,26 +18,35 @@ export default {
   data() {
     return {
       name: "count",
-      num: 0,
-      answer: false,
+      count: 0,
+      nextpage: true,
     }
   },
-  methods: {
-    keynumber: function () {
-      this.answer = true
-      this.answer = "255"
+  computed: {
+    num() {
+      let count = this.count
+      return count
     },
+    answer() {
+      if (this.count === 255) {
+        return true
+      } else {
+        return false
+      }
+    },
+  },
+  methods: {
     plusbutton: function () {
-      this.num = this.num + 1
+      this.count += 1
     },
     multipliedbutton: function () {
-      this.num = this.num * 2
+      this.count *= 2
     },
     minusbutton: function () {
-      this.num = this.num - 3
+      this.count -= 3
     },
     resetbutton: function () {
-      this.num = this.num * 0
+      this.count *= 0
     },
     Page5commentaryView() {
       this.$router.push("/")
