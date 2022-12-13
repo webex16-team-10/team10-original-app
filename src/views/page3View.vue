@@ -39,11 +39,14 @@
 
     <div class="colors-container">
       <div class="mini-palette"></div>
+      <input v-model.number="age" type="number" id="name" />
     </div>
   </div>
 </template>
 
 <script>
+//import { assertClassPrivateMethod } from '@babel/types'
+
 export default {
   data() {
     return {
@@ -56,6 +59,7 @@ export default {
       ],
       alphaNum: 0,
       answer: false,
+      keyword: false,
     }
   },
   computed: {
