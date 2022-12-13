@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"
 import HomeView from "../views/HomeView.vue"
-import page3View from "@/views/page3View.vue"
 import page5View from "@/views/page5View.vue"
 const routes = [
   {
@@ -25,12 +24,12 @@ const routes = [
   {
     path: "/page3",
     name: "page3",
-    component: () => import("../views/Page3View.vue"),
+    component: () => import("../views/page3View.vue"),
   },
   {
     path: "/page3commentary",
     name: "page3commentary",
-    component: () => import("../views/Page3commentaryView.vue"),
+    component: () => import("../views/page3commentaryView.vue"),
   },
   {
     path: "/page4",
