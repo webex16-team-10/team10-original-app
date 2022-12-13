@@ -2,6 +2,16 @@
   <title>Question2</title>
   <h1>パスワードを探せ</h1>
   <h2>ヒント：緑色を表示せよ</h2>
+  <section>
+    <input
+      type="number"
+      placeholder="色の名前を入れると?"
+      min="0"
+      max="255"
+      v-model="green"
+    />
+    <input type="range" min="0" max="1" step="0.1" v-model="alpha" />
+  </section>
   <section id="page3">
     <label>解答欄<input type="text" size="40" /></label>
     <button v-on:click="next">回答</button>
@@ -11,16 +21,20 @@
     </div>
   </section>
   <div class="app">
-    <p>rgba( {{ red }}, {{ green }}, 200, 0.5 )</p>
+    <p>rgba( {{ red }}, {{ green }}, {{ blue }}, {{ alpha }})</p>
     <div
       class="palette"
       v-on:mousemove="changeColor"
       v-on:click="pickColor"
-      v-bind:style="{
-        backgroundColor: `rgba(${red}, ${green}, 200, 0.5)`,
-      }"
+      v-bind:style="{ backgroundColor: `rgba(${red}, ${green}, 200, 0.5)` }"
     >
-      <p class="keyword">'mousemove'</p>
+      <p
+        v-if="passDisplay"
+        v-on:mousemove="changeAlpha"
+        v-bind:style="{ color: `rgba(200, 150, 0, ${alphaNum})` }"
+      >
+        mousemove
+      </p>
     </div>
 
     <div class="colors-container">
@@ -38,13 +52,24 @@ export default {
     return {
       red: 0,
       green: 0,
-      //arpha: 0,
+      blue: 0,
+      alpha: 0.5,
       colors: [
         // { red: 0, green: 0 }
       ],
+      alphaNum: 0,
       answer: false,
       keyword: false,
     }
+  },
+  computed: {
+    passDisplay() {
+      if (this.green === 150) {
+        return true
+      } else {
+        return false
+      }
+    },
   },
   methods: {
     next: function () {
@@ -54,7 +79,11 @@ export default {
 
     changeColor(e) {
       this.red = e.offsetX
-      this.green = e.offsetY
+      this.blue = e.offsetY
+      this.alphaNum = e.offsetY * 0.00392
+    },
+    changeAlpha(f) {
+      this.alphaNum = f.offsetY
     },
     pickColor() {
       const newColor = {
@@ -68,14 +97,7 @@ export default {
       this.green = color.green
     },
     Page3commentaryView() {
-      this.$router.push("/")
-    },
-  },
-  computed: {
-    paletteStyle() {
-      return {
-        backgroundColor: `rgba(${this.red}, ${this.green}, 200, 0.5)`,
-      }
+      this.$router.push("/page3commentary")
     },
   },
 }

@@ -18,9 +18,29 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/page3View",
-    name: "page3View",
-    component: page3View,
+    path: "/title",
+    name: "title",
+    component: () => import("../views/TitleView.vue"),
+  },
+  {
+    path: "/page3",
+    name: "page3",
+    component: () => import("../views/Page3View.vue"),
+  },
+  {
+    path: "/page3commentary",
+    name: "page3commentary",
+    component: () => import("../views/Page3commentaryView.vue"),
+  },
+  {
+    path: "/page4",
+    name: "page4",
+    component: () => import("../views/Page4View.vue"),
+  },
+  {
+    path: "/page4commentary",
+    name: "page4commentary",
+    component: () => import("../views/Page4commentaryView.vue"),
   },
   {
     path: "/page5View",
