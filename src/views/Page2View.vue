@@ -3,7 +3,7 @@
     <title>Question1</title>
     <h1>クイズ</h1>
     <h2>Q. {{ quiz.text }}</h2>
-    <img class="quiz-image" src="@/assets/emperor.png" alt="quiz.text" />
+    <img class="quiz-image" src="@/assets/ホトケノザ.png" alt="quiz.text" />
     <div class="container">
       <button
         v-for="(choice, i) in quiz.choices"
@@ -14,7 +14,7 @@
       </button>
     </div>
     <div>{{ feedback }}</div>
-    <button v-on:click="linknextpage">解説ページへ</button>
+    <button v-if="nextpage" v-on:click="linknextpage">解説ページへ</button>
   </div>
 </template>
 
@@ -22,25 +22,24 @@
 export default {
   data() {
     return {
+      nextpage: false,
       feedback: "",
       quiz: {
-        text: "この動物の名前は何？",
+        text: "この植物の名前は何？",
         choices: [
           {
-            text: "マレーヒヨケザル",
-            feedback:
-              "残念！マレーヒヨケザルは、ムササビのように飛ぶことができる動物です。",
+            text: "ヒメオドリコソウ",
+            feedback: "残念！ヒメオドリコソウは小さな唇型の紅紫色の花です。",
             answer: false,
           },
           {
-            text: "アカウアカリ",
-            feedback: "残念！アカウアカリは、真っ赤な顔が特徴的な動物です。",
+            text: "キツリフネ",
+            feedback: "残念！黄色い花で、法螺貝のような形です。",
             answer: false,
           },
           {
-            text: "エンペラータマリン",
-            feedback:
-              "正解！エンペラータマリンは、皇帝のような髭が特徴的な動物です。",
+            text: "ホトケノザ",
+            feedback: "正解！鳥の嘴のような形の花です。",
             answer: true,
           },
         ],
@@ -50,6 +49,9 @@ export default {
   methods: {
     choiced(choice) {
       this.feedback = choice.feedback
+      if (choice.answer) {
+        this.nextpage = true
+      }
     },
 
     linknextpage() {
