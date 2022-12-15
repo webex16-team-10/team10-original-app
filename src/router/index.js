@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 import HomeView from "../views/HomeView.vue"
-
+import page5View from "@/views/page5View.vue"
 const routes = [
   {
     path: "/",
@@ -17,7 +17,11 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/Page2View",
+
+  
+ 
+
+  path: "/Page2View",
     name: "Page2View",
     component: () => import("../views/Page2View.vue"),
   },
@@ -26,30 +30,34 @@ const routes = [
     name: "Page2Commentary",
     component: () => import("../views/Page2CommentaryView.vue"),
   },
-  {
-    path: "/Page1View",
-    name: "Page1View",
-    component: () => import("../views/Page1View.vue"),
+    path: "/title",
+    name: "title",
+    component: () => import("../views/TitleView.vue"),
   },
   {
-    path: "/Page3View",
-    name: "Page3View",
-    component: () => import("../views/Page3View.vue"),
+    path: "/page3",
+    name: "page3",
+    component: () => import("../views/page3View.vue"),
   },
   {
-    path: "/Page4View",
-    name: "Page4View",
+    path: "/page3commentary",
+    name: "page3commentary",
+    component: () => import("../views/page3commentaryView.vue"),
+  },
+  {
+    path: "/page4",
+    name: "page4",
     component: () => import("../views/Page4View.vue"),
   },
   {
-    path: "/Page5View",
-    name: "Page5View",
-    component: () => import("../views/Page5View.vue"),
+    path: "/page4commentary",
+    name: "page4commentary",
+    component: () => import("../views/Page4commentaryView.vue"),
   },
   {
-    path: "/Page6View",
-    name: "Page6View",
-    component: () => import("../views/Page6View.vue"),
+    path: "/page5View",
+    name: "page5View",
+    component: page5View,
   },
 ]
 
