@@ -1,11 +1,11 @@
 <template>
   <nav>
-    <router-link to="/page5View">page5View</router-link>
     <router-link to="/title">Title</router-link> |
     <router-link to="/page3">Page3View</router-link> |
     <router-link to="/page3commentary">Page3commentaryView</router-link> |
     <router-link to="/page4">Page4View</router-link> |
     <router-link to="/page4commentary">Page4commentaryView</router-link> |
+    <router-link to="/page5">page5View</router-link>|
     <router-link to="/about">About</router-link>|
     <router-link to="/">Home</router-link>
   </nav>
