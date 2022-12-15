@@ -26,6 +26,31 @@ const routes = [
     name: "Page2Commentary",
     component: () => import("../views/Page2CommentaryView.vue"),
   },
+  {
+    path: "/Page1View",
+    name: "Page1View",
+    component: () => import("../views/Page1View.vue"),
+  },
+  {
+    path: "/Page3View",
+    name: "Page3View",
+    component: () => import("../views/Page3View.vue"),
+  },
+  {
+    path: "/Page4View",
+    name: "Page4View",
+    component: () => import("../views/Page4View.vue"),
+  },
+  {
+    path: "/Page5View",
+    name: "Page5View",
+    component: () => import("../views/Page5View.vue"),
+  },
+  {
+    path: "/Page6View",
+    name: "Page6View",
+    component: () => import("../views/Page6View.vue"),
+  },
 ]
 
 const router = createRouter({
