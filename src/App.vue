@@ -1,5 +1,7 @@
 <template>
   <nav>
+
+ <router-link to="/Page2View">| Quiz</router-link>
     <router-link to="/page5View">page5View</router-link>
     <router-link to="/title">Title</router-link> |
     <router-link to="/page3">Page3View</router-link> |
