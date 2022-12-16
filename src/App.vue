@@ -2,6 +2,7 @@
   <nav>
     <router-link to="/title">Title</router-link> |
     <router-link to="/page1">Page1View</router-link> |
+    <router-link to="/Page2View">| Quiz</router-link>
     <router-link to="/page3">Page3View</router-link> |
     <router-link to="/page3commentary">Page3commentaryView</router-link> |
     <router-link to="/page4">Page4View</router-link> |
