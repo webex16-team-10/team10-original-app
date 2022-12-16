@@ -32,19 +32,25 @@
         >ヒント</a
       >
     </p>
-    <p>
-      回答欄<input type="text" class="pass-word" id="pass-word" />
-      <button id="answer1">回答</button>
-    </p>
-    <div v-if="answer1 === 'mousemove'">
-      <h3>正解!</h3>
-      <button v-on:click="Page4commentaryView">次へ</button>
+    <p>回答欄<input type="text" class="answer1" id="answer1" /></p>
+    <div>
+      <span v-if="answer">
+        正解!
+        <button v-on:click="Page4commentaryView">次へ</button></span
+      >
     </div>
   </h2>
 </template>
 <script>
 export default {
   methods: {
+    answer() {
+      if (this.answer1 === "bokoku") {
+        return true
+      } else {
+        return false
+      }
+    },
     Page4commentaryView() {
       this.$router.push("/page4commentary")
     },
