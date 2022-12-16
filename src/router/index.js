@@ -59,6 +59,11 @@ const routes = [
     name: "page5View",
     component: page5View,
   },
+  {
+    path: "/page5commentaryView",
+    name: "page5commentaryView",
+    component: () => import("@/views/page5commentaryView.vue"),
+  },
 ]
 
 const router = createRouter({
