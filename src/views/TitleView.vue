@@ -1,9 +1,11 @@
 <template>
   <div>タイトル</div>
-  <div><button id="start">START</button></div>
+  <div><button id="start" v-on:click="page1">START</button></div>
   <div>
     ABOUT
-    <p>謎解きを通して、プログラミングで何が出来るか学ぼう！</p>
+    <p>謎解き×プログラミング学習</p>
+    <p>プログラミングで何が出来るのか、実際のコードを見ながら、遊んで学べる</p>
+    <p>クリック、ドラッグ、入力のみの簡単操作！</p>
   </div>
   <div>
     PASSWORD
@@ -11,3 +13,12 @@
     <p><button id="secret">GO</button></p>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    page1() {
+      this.$router.push("/page1")
+    },
+  },
+}
+</script>

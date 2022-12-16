@@ -35,6 +35,11 @@ const routes = [
     component: () => import("../views/TitleView.vue"),
   },
   {
+    path: "/page1",
+    name: "page1",
+    component: () => import("../views/page1View.vue"),
+  },
+  {
     path: "/page3",
     name: "page3",
     component: () => import("../views/page3View.vue"),
