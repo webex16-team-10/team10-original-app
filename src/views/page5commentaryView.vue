@@ -13,7 +13,7 @@
 export default {
   methods: {
     page6() {
-      this.$router.push("/")
+      this.$router.push("/Page6View")
     },
   },
 }

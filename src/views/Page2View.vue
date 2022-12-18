@@ -55,7 +55,7 @@ export default {
     },
 
     linknextpage() {
-      this.$router.push("/Page2Commentary")
+      this.$router.push("/Page2commentary")
     },
   },
 }
@@ -63,7 +63,7 @@ export default {
 
 <style>
 .app {
-  float: left;
+  display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;

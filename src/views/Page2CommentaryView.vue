@@ -3,6 +3,7 @@
     <title>Quiz解説</title>
     <h1>Onclickについて</h1>
     <h2>ボタンをクリックすると指定した文章が表示されます。</h2>
+    <img class="quiz-image" src="@/assets/ホトケノザ.png" alt="quiz.text" />
     <button v-on:click="page3">次へ</button>
     >
   </div>

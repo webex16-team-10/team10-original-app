@@ -10,7 +10,7 @@
 export default {
   methods: {
     page2() {
-      this.$router.push("/page3")
+      this.$router.push("/Page2View")
     },
   },
 }

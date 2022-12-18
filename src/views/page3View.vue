@@ -97,7 +97,7 @@ export default {
       this.green = color.green
     },
     Page3commentaryView() {
-      this.$router.push("/page3commentary")
+      this.$router.push("/Page3commentary")
     },
   },
 }
