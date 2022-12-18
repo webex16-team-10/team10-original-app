@@ -49,7 +49,7 @@ export default {
       this.count *= 0
     },
     Page5commentaryView() {
-      this.$router.push("/")
+      this.$router.push("/Page5commentary")
     },
   },
 }

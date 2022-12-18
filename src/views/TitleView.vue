@@ -17,7 +17,7 @@
 export default {
   methods: {
     page1() {
-      this.$router.push("/page1")
+      this.$router.push("/Page1View")
     },
   },
 }
