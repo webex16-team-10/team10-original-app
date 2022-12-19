@@ -45,12 +45,16 @@ export default {
     linkpage6() {
       this.$router.push("/Page6View")
     },
+    linkpage1() {
+      this.$router.push("/Page1View")
+    },
   },
 }
 </script>
 
 <style>
 .lastpageview {
+  float: left;
   display: flex;
   width: 100%;
   flex-direction: column;

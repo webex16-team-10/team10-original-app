@@ -32,23 +32,31 @@
         >ヒント</a
       >
     </p>
-    <p>回答欄<input type="text" class="answer1" id="answer1" /></p>
-    <div>
-      <span v-if="answer">
-        正解!
-        <button v-on:click="Page4commentaryView">次へ</button></span
-      >
+    <p>
+      回答欄<input type="text" class="answer1" id="answer1" v-model="bokoku" />
+      <button v-on:click="answerBtn()">回答</button>
+    </p>
+    <div v-if="answer1">
+      <p>正解!</p>
+      <button v-on:click="Page4commentaryView">次へ</button>
     </div>
   </h2>
 </template>
 <script>
 export default {
+  data() {
+    return {
+      name: "answer1",
+      count: "",
+      nextpage: true,
+      bokoku: "",
+      answer1: false,
+    }
+  },
   methods: {
-    answer() {
-      if (this.answer1 === "bokoku") {
-        return true
-      } else {
-        return false
+    answerBtn() {
+      if (this.bokoku === "bokoku") {
+        this.answer1 = true
       }
     },
     Page4commentaryView() {
