@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <router-link to="/page6View">page6View</router-link>
     <router-link to="/page3View">page3View</router-link> |
     <router-link to="/about">About</router-link>
     <router-link to="/">Home</router-link>

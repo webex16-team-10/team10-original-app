@@ -26,6 +26,11 @@ const routes = [
     name: "page5commentaryView",
     component: () => import("@/views/page5commentaryView.vue"),
   },
+  {
+    path: "/page6View",
+    name: "page6View",
+    component: () => import("@/views/page6View.vue"),
+  },
 ]
 
 const router = createRouter({
