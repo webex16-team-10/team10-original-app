@@ -1,9 +1,13 @@
 <template>
   <nav>
+    <router-link to="/title">Title</router-link> |
+    <router-link to="/page1View">Page1</router-link> |
+    <router-link to="/Page2View">| Page2</router-link>|
+    <router-link to="/page3View">Page3</router-link> |
+    <router-link to="/page4View">Page4</router-link> |
+    <router-link to="/page5View">page5</router-link>|
     <router-link to="/page6View">page6View</router-link>
-    <router-link to="/page3View">page3View</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-link to="/">Home</router-link>
+    <router-link to="/LastPageView">lastpage</router-link>|
   </nav>
   <router-view />
 </template>
