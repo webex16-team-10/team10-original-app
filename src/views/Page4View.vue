@@ -34,12 +34,11 @@
     </p>
     <p>
       回答欄<input type="text" class="answer1" id="answer1" v-model="bokoku" />
+      <button v-on:click="answerBtn()">回答</button>
     </p>
-    <div>
-      <span v-if="answer1">
-        正解!
-        <button v-on:click="Page4commentaryView">次へ</button></span
-      >
+    <div v-if="answer1">
+      <p>正解!</p>
+      <button v-on:click="Page4commentaryView">次へ</button>
     </div>
   </h2>
 </template>
@@ -50,19 +49,16 @@ export default {
       name: "answer1",
       count: "",
       nextpage: true,
+      bokoku: "",
+      answer1: false,
     }
   },
-  computed: {
-    answer1() {
-      if (this.count === "bokoku") {
-        return true
-      } else {
-        return false
+  methods: {
+    answerBtn() {
+      if (this.bokoku === "bokoku") {
+        this.answer1 = true
       }
     },
-  },
-
-  methods: {
     Page4commentaryView() {
       this.$router.push("/page4commentary")
     },
