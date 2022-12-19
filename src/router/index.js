@@ -64,6 +64,11 @@ const routes = [
     name: "LastPageView",
     component: () => import("../views/LastPageView.vue"),
   },
+  {
+    path: "/page6View",
+    name: "page6View",
+    component: () => import("@/views/page6View.vue"),
+  },
 ]
 
 const router = createRouter({
