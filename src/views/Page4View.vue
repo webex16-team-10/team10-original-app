@@ -32,9 +32,11 @@
         >ヒント</a
       >
     </p>
-    <p>回答欄<input type="text" class="answer1" id="answer1" /></p>
+    <p>
+      回答欄<input type="text" class="answer1" id="answer1" v-model="bokoku" />
+    </p>
     <div>
-      <span v-if="answer">
+      <span v-if="answer1">
         正解!
         <button v-on:click="Page4commentaryView">次へ</button></span
       >
@@ -43,14 +45,24 @@
 </template>
 <script>
 export default {
-  methods: {
-    answer() {
-      if (this.answer1 === "bokoku") {
+  data() {
+    return {
+      name: "answer1",
+      count: "",
+      nextpage: true,
+    }
+  },
+  computed: {
+    answer1() {
+      if (this.count === "bokoku") {
         return true
       } else {
         return false
       }
     },
+  },
+
+  methods: {
     Page4commentaryView() {
       this.$router.push("/page4commentary")
     },
