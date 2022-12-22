@@ -13,7 +13,7 @@
     </div>
     <div class="site">
       <p>実際にコードを書いてみよう</p>
-      <a href="https://prog-8npm.com/"> おすすめリンク </a>
+      <a href="https://prog-8.com/"> おすすめリンク </a>
     </div>
     <div>password:スタート画面からこのページに移動できます :fusianasan</div>
     <div class="start">
@@ -58,7 +58,7 @@ export default {
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
-  color: yellow;
+  color: #7a2c0b;
   text-align: justify;
   text-justify: auto;
   display: flex;
