@@ -26,7 +26,7 @@
 export default {
   methods: {
     linktitle() {
-      this.$router.push("/title")
+      this.$router.push("/")
     },
     linkpage2() {
       this.$router.push("/Page2View")

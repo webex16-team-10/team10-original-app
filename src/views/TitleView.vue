@@ -1,15 +1,19 @@
 <template>
   <div class="bg" v-bind:style="pageStyle">
-    <div>タイトル</div>
-    <div><button id="start" v-on:click="page1">START</button></div>
-    <div>
-      ABOUT
-      <p>謎解き×プログラミング学習</p>
-      <p>
-        プログラミングで何が出来るのか、実際のコードを見ながら、遊んで学べる
-      </p>
-      <p>クリック、ドラッグ、入力のみの簡単操作！</p>
-    </div>
+    <h1>
+      <div class="B">プログラミング×アドベンチャー</div>
+      <div><button id="start" v-on:click="page1">START</button></div>
+    </h1>
+    <h2>
+      <div>
+        ABOUT
+        <p>謎解き×プログラミング学習</p>
+        <p>
+          プログラミングで何が出来るのか、実際のコードを見ながら、遊んで学べる
+        </p>
+        <p>クリック、ドラッグ、入力のみの簡単操作！</p>
+      </div>
+    </h2>
     <div>
       PASSWORD
       <p>
@@ -21,7 +25,7 @@
         <button v-on:click="gotolastpage">GO</button>
       </div>
     </div>
-    <p><img id="A" src="../assets/opna.png" /></p>
+    <p><img id="A" src="../assets/opna2.png" /></p>
   </div>
 </template>
 
@@ -54,6 +58,10 @@ export default {
 <style scoped>
 .A {
   size: 500px;
+}
+.B {
+  font-size: "7";
+  color: blue;
 }
 .bg {
   background-image: url(../assets/798871_s.jpg);

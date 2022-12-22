@@ -6,7 +6,7 @@
       <p>仕掛けを解き明かし、古代の秘宝を手に入れろ！</p>
       <p><button id="start" v-on:click="page2">挑戦する！</button></p>
     </h2>
-    <p><img alt="Vue logo" src="../assets/opna.png" /></p>
+    <p><img alt="Vue logo" src="../assets/opna2.png" /></p>
   </div>
 </template>
 <script>
