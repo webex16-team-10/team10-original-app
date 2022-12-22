@@ -65,9 +65,14 @@ const routes = [
     component: () => import("../views/LastPageView.vue"),
   },
   {
-    path: "/page6View",
-    name: "page6View",
-    component: () => import("@/views/page6View.vue"),
+    path: "/Page6View",
+    name: "Page6View",
+    component: () => import("../views/page6View.vue"),
+  },
+  {
+    path: "/page6commentary",
+    name: "page6commetary",
+    component: () => import("../views/page6commentaryView.vue"),
   },
 ]
 
