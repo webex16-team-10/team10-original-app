@@ -10,7 +10,17 @@
     <button v-on:click="page5">次へ</button>
   </div>
 </template>
-<style>
+
+<script>
+export default {
+  methods: {
+    page5() {
+      this.$router.push("/Page5View")
+    },
+  },
+}
+</script>
+<style scoped>
 .c {
   height: 100px;
 }
@@ -25,12 +35,3 @@
   position: "center";
 }
 </style>
-<script>
-export default {
-  methods: {
-    page5() {
-      this.$router.push("/Page5View")
-    },
-  },
-}
-</script>

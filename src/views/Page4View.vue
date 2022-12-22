@@ -51,17 +51,7 @@
     </h2>
   </div>
 </template>
-<style>
-.B {
-  color: #fe9a2e;
-}
-.bg {
-  background-image: url(../assets/IMG_5914.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: "center";
-}
-</style>
+
 <script>
 export default {
   data() {
@@ -85,3 +75,14 @@ export default {
   },
 }
 </script>
+<style scoped>
+.B {
+  color: #fe9a2e;
+}
+.bg {
+  background-image: url(../assets/IMG_5914.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: "center";
+}
+</style>

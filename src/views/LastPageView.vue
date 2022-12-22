@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .lastpageview {
   background-image: url(@/assets/宝箱.jpg);
   background-size: cover;

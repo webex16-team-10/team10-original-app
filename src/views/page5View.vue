@@ -56,7 +56,7 @@ export default {
   },
 }
 </script>
-<style>
+<style scoped>
 .maincontainer {
   background-image: url(@/assets/page5image\(kari\).jpg);
   background-position: center center;

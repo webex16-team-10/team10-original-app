@@ -20,7 +20,7 @@ export default {
   },
 }
 </script>
-<style>
+<style scoped>
 .allcontainer {
   background-image: url(@/assets/page6image.jpg);
   background-position: center center;
