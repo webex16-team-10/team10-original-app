@@ -11,13 +11,9 @@
     </div>
     <div class="site">
       <p>実際にコードを書いてみよう</p>
-      <a
-        href="https://www.pref.yamagata.jp/020026/kensei/shoukai/yamagataken/best1.html"
-      >
-        おすすめリンク
-      </a>
+      <a href="https://prog-8.com/"> おすすめリンク </a>
     </div>
-
+    <div>password:スタート画面からこのページに移動できます :fusianasan</div>
     <div class="start">
       <button v-on:click="linktitle">スタート画面に戻る</button>
     </div>
