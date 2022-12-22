@@ -6,7 +6,9 @@
       ＜a
       href="https:~"＞リンク＜/a＞（＜＞は実際は半角）と入力することで、外部サイトへ移動できるリンクをつくれるよ。
     </h2>
-    <p><img id="c" src="../assets/page4kaisetu.png" /></p>
+    <div id="C">
+      <img id="D" src="../assets/page4kaisetu3.png" />
+    </div>
     <button v-on:click="page5">次へ</button>
   </div>
 </template>
@@ -21,8 +23,11 @@ export default {
 }
 </script>
 <style scoped>
-.c {
-  height: 100px;
+.C {
+  height: 500px;
+}
+.D {
+  height: 100%;
 }
 
 .B {

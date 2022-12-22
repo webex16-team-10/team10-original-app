@@ -3,7 +3,7 @@
     <title>Question4</title>
     <h1 class="text1">以下のボタンを使って、 255を表示せよ</h1>
     <h2 class="text2">*指定した数字が出たら次に進めるよ</h2>
-    <div id="count">
+    <div id="count" class="count">
       <span class="text3" v-if="answer">
         <h2>正解!</h2>
         <button v-on:click="Page5commentaryView">次へ</button> </span
@@ -75,6 +75,9 @@ export default {
   color: aquamarine;
 }
 .num {
+  color: aquamarine;
+}
+.count {
   color: aquamarine;
 }
 </style>
