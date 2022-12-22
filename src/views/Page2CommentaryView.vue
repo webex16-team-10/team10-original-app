@@ -34,10 +34,9 @@ export default {
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 .commentary-image1 {
-  height: 300px;
-  width: 300px;
+  height: 700px;
+  width: 700px;
   object-fit: contain;
-  position: center;
   align-items: center;
 }
 </style>
