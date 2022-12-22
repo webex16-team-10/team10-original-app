@@ -3,9 +3,7 @@
     <title>Quiz解説</title>
     <h1>Onclickについて</h1>
     <h2>ボタンをクリックすると指定した文章が表示されます。</h2>
-    <img class="commentary-image1" src="@/assets/ホトケノザ.png" />
-    <img class="commentary-image2" src="@/assets/ホトケノザ.png" />
-    <img class="commentary-image3" src="@/assets/ホトケノザ.png" />
+    <img class="commentary-image1" src="@/assets/page2kaisetu.png" />
     <button v-on:click="page3">次へ</button>
   </div>
 </template>
@@ -24,6 +22,7 @@ export default {
 .Page2Commentary {
   background-image: url(@/assets/森１.jpg);
   background-size: cover;
+  position: "center";
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
@@ -38,15 +37,7 @@ export default {
   height: 300px;
   width: 300px;
   object-fit: contain;
-}
-.commentary-image2 {
-  height: 300px;
-  width: 300px;
-  object-fit: contain;
-}
-.commentary-image3 {
-  height: 300px;
-  width: 300px;
-  object-fit: contain;
+  position: center;
+  align-items: center;
 }
 </style>

@@ -13,7 +13,7 @@
     </div>
     <div class="site">
       <p>実際にコードを書いてみよう</p>
-      <a href="https://prog-8.com/"> おすすめリンク </a>
+      <a href="https://prog-8npm.com/"> おすすめリンク </a>
     </div>
     <div>password:スタート画面からこのページに移動できます :fusianasan</div>
     <div class="start">
@@ -53,6 +53,7 @@ export default {
 <style scoped>
 .lastpageview {
   background-image: url(@/assets/宝箱.jpg);
+  position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.5);
@@ -60,7 +61,6 @@ export default {
   color: yellow;
   text-align: justify;
   text-justify: auto;
-  float: left;
   display: flex;
   flex-direction: column;
   align-items: center;
