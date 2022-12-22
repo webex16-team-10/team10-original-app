@@ -1,12 +1,30 @@
 <template>
-  <title>ページ4 解説</title>
-  <h1>＜a＞について</h1>
-  <h2>
-    ＜a
-    href="https:~"＞リンク＜/a＞（＜＞は実際は半角）と入力することで、外部サイトへ移動できるりんくをつくれるよ。
-  </h2>
-  <button v-on:click="page5">次へ</button>
+  <div class="bg" v-bind:style="pageStyle">
+    <title class="B">ページ4 解説</title>
+    <h1 class="B">＜a＞について</h1>
+    <h2 class="B">
+      ＜a
+      href="https:~"＞リンク＜/a＞（＜＞は実際は半角）と入力することで、外部サイトへ移動できるリンクをつくれるよ。
+    </h2>
+    <p><img id="c" src="../assets/page4kaisetu.png" /></p>
+    <button v-on:click="page5">次へ</button>
+  </div>
 </template>
+<style>
+.c {
+  height: 100px;
+}
+
+.B {
+  color: #fe9a2e;
+}
+.bg {
+  background-image: url(../assets/IMG_5914.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: "center";
+}
+</style>
 <script>
 export default {
   methods: {
