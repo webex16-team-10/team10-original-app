@@ -1,20 +1,22 @@
 <template>
   <div class="Page2View">
-    <title>Question1</title>
-    <h1>クイズ</h1>
-    <h2>Q. {{ quiz.text }}</h2>
-    <img class="quiz-image" src="@/assets/ホトケノザ.png" alt="quiz.text" />
-    <div class="container">
-      <button
-        v-for="(choice, i) in quiz.choices"
-        v-bind:key="i"
-        v-on:click="choiced(choice)"
-      >
-        {{ choice.text }}
-      </button>
+    <div class="contents">
+      <title>Question1</title>
+      <h1>クイズ</h1>
+      <h2>Q. {{ quiz.text }}</h2>
+      <img class="quiz-image" src="@/assets/ホトケノザ.png" alt="quiz.text" />
+      <div class="container">
+        <button
+          v-for="(choice, i) in quiz.choices"
+          v-bind:key="i"
+          v-on:click="choiced(choice)"
+        >
+          {{ choice.text }}
+        </button>
+      </div>
+      <div class="feedback">{{ feedback }}</div>
+      <button v-if="nextpage" v-on:click="linknextpage">解説ページへ</button>
     </div>
-    <div>{{ feedback }}</div>
-    <button v-if="nextpage" v-on:click="linknextpage">解説ページへ</button>
   </div>
 </template>
 
@@ -25,7 +27,7 @@ export default {
       nextpage: false,
       feedback: "",
       quiz: {
-        text: "この植物の名前は何？",
+        text: "道に植物が生えているぞ。この植物の名前は何？",
         choices: [
           {
             text: "ヒメオドリコソウ",
@@ -62,14 +64,26 @@ export default {
 </script>
 
 <style>
-.app {
+.Page2View {
+  background-image: url(@/assets/森１.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contents {
+  display: flex;
+  color: #800080;
   width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
-
 .quiz-image {
   height: 300px;
   width: 300px;
@@ -78,10 +92,17 @@ export default {
 
 .container {
   display: flex;
+  font-weight: 300;
   height: 2em;
   width: 400px;
   padding: 1em;
+  align-items: center;
   justify-content: space-around;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+.feedback {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 .linknextpage {
   display: flex;
