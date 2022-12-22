@@ -20,6 +20,7 @@ export default {
   },
 }
 </script>
+
 <style>
 .maincontainer {
   background-image: url(@/assets/page5image\(kari\).jpg);
