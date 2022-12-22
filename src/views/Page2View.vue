@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .Page2View {
   background-image: url(@/assets/森１.jpg);
   background-size: cover;

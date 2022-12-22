@@ -9,14 +9,6 @@
     <p><img alt="Vue logo" src="../assets/opna.png" /></p>
   </div>
 </template>
-<style>
-.bg {
-  background-image: url(../assets/798871_s.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: "center";
-}
-</style>
 <script>
 export default {
   methods: {
@@ -26,3 +18,11 @@ export default {
   },
 }
 </script>
+<style scoped>
+.bg {
+  background-image: url(../assets/798871_s.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: "center";
+}
+</style>

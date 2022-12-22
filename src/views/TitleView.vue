@@ -24,17 +24,7 @@
     <p><img id="A" src="../assets/opna.png" /></p>
   </div>
 </template>
-<style>
-.A {
-  size: 500px;
-}
-.bg {
-  background-image: url(../assets/798871_s.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: "center";
-}
-</style>
+
 <script>
 export default {
   data() {
@@ -61,3 +51,14 @@ export default {
   },
 }
 </script>
+<style scoped>
+.A {
+  size: 500px;
+}
+.bg {
+  background-image: url(../assets/798871_s.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: "center";
+}
+</style>
