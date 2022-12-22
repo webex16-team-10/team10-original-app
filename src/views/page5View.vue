@@ -1,17 +1,19 @@
 <template>
-  <title>Question4</title>
-  <h1>以下のボタンを使って、 255を表示せよ</h1>
-  <h2>*数字を出せたら、それをクリックしてね</h2>
-  <div id="count">
-    <span v-if="answer">
-      <h2>正解!</h2>
-      <button v-on:click="Page5commentaryView">次へ</button> </span
-    >{{ num }}
+  <div class="maincontainer">
+    <title>Question4</title>
+    <h1 class="text1">以下のボタンを使って、 255を表示せよ</h1>
+    <h2 class="text2">*指定した数字が出たら次に進めるよ</h2>
+    <div id="count">
+      <span class="text3" v-if="answer">
+        <h2>正解!</h2>
+        <button v-on:click="Page5commentaryView">次へ</button> </span
+      >{{ num }}
+    </div>
+    <button v-on:click="plusbutton">+1</button>
+    <button v-on:click="multipliedbutton">×2</button>
+    <button v-on:click="minusbutton">-3</button>
+    <button v-on:click="resetbutton">リセット</button>
   </div>
-  <button v-on:click="plusbutton">+1</button>
-  <button v-on:click="multipliedbutton">×2</button>
-  <button v-on:click="minusbutton">-3</button>
-  <button v-on:click="resetbutton">リセット</button>
 </template>
 <script>
 export default {
@@ -54,3 +56,25 @@ export default {
   },
 }
 </script>
+<style>
+.maincontainer {
+  background-image: url(@/assets/page5image\(kari\).jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  height: 700px;
+}
+.text1 {
+  color: aquamarine;
+}
+.text2 {
+  color: aquamarine;
+}
+.text3 {
+  color: aquamarine;
+}
+.num {
+  color: aquamarine;
+}
+</style>
