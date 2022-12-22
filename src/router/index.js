@@ -20,6 +20,11 @@ const routes = [
     component: () => import("../views/Page2CommentaryView.vue"),
   },
   {
+    path: "/title",
+    name: "title",
+    component: () => import("../views/TitleView.vue"),
+  },
+  {
     path: "/Page1View",
     name: "Page1View",
     component: () => import("../views/page1View.vue"),
@@ -58,6 +63,16 @@ const routes = [
     path: "/LastPageView",
     name: "LastPageView",
     component: () => import("../views/LastPageView.vue"),
+  },
+  {
+    path: "/Page6View",
+    name: "Page6View",
+    component: () => import("../views/page6View.vue"),
+  },
+  {
+    path: "/page6commentary",
+    name: "page6commetary",
+    component: () => import("../views/page6commentaryView.vue"),
   },
 ]
 

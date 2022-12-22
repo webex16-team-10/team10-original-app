@@ -6,6 +6,7 @@
     <router-link to="/page3View">Page3</router-link> |
     <router-link to="/page4View">Page4</router-link> |
     <router-link to="/page5View">page5</router-link>|
+    <router-link to="/page6View">page6View</router-link>
     <router-link to="/LastPageView">lastpage</router-link>|
   </nav>
   <router-view />

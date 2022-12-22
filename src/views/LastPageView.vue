@@ -13,13 +13,9 @@
     </div>
     <div class="site">
       <p>実際にコードを書いてみよう</p>
-      <a
-        href="https://www.pref.yamagata.jp/020026/kensei/shoukai/yamagataken/best1.html"
-      >
-        おすすめリンク
-      </a>
+      <a href="https://prog-8.com/"> おすすめリンク </a>
     </div>
-
+    <div>password:スタート画面からこのページに移動できます :fusianasan</div>
     <div class="start">
       <button v-on:click="linktitle">スタート画面に戻る</button>
     </div>
@@ -47,6 +43,9 @@ export default {
     linkpage6() {
       this.$router.push("/Page6View")
     },
+    linkpage1() {
+      this.$router.push("/Page1View")
+    },
   },
 }
 </script>
@@ -61,6 +60,7 @@ export default {
   color: yellow;
   text-align: justify;
   text-justify: auto;
+  float: left;
   display: flex;
   flex-direction: column;
   align-items: center;
