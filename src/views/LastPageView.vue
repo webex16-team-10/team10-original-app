@@ -53,7 +53,7 @@ export default {
 
 <style>
 .lastpageview {
-  background-image: url(@/assets/森１.jpg);
+  background-image: url(@/assets/宝箱.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.5);
