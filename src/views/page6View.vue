@@ -130,7 +130,7 @@ export default {
       }
     },
     nextPageBtn() {
-      this.$router.push("@/views/page5commentaryView")
+      this.$router.push("/Page6commentary")
     },
   },
 }
@@ -138,6 +138,9 @@ export default {
 <style scoped>
 .allcontainer {
   background-image: url(@/assets/page5image\(kari\).jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .write1 {
   color: aquamarine;
