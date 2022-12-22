@@ -137,7 +137,7 @@ export default {
 </script>
 <style scoped>
 .allcontainer {
-  background-image: url(@/assets/page5image\(kari\).jpg);
+  background-image: url(@/assets/page6image.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
