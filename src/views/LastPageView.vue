@@ -1,13 +1,15 @@
 <template>
   <div class="lastpageview">
-    <title>Congratulations</title>
-    <div class="pagelink">
+    <h1>Congratulations!!!</h1>
+    <div class="page">
       <h1>もう一度学びたいページに飛べるよ</h1>
-      <button v-on:click="linkpage2">Quiz</button>
-      <button v-on:click="linkpage3">パレット</button>
-      <button v-on:click="linkpage4">クロスワード</button>
-      <button v-on:click="linkpage5">電卓</button>
-      <button v-on:click="linkpage6">Drag-and-Drop</button>
+      <div class="pagelink">
+        <button v-on:click="linkpage2">Quiz</button>
+        <button v-on:click="linkpage3">パレット</button>
+        <button v-on:click="linkpage4">クロスワード</button>
+        <button v-on:click="linkpage5">電卓</button>
+        <button v-on:click="linkpage6">Drag-and-Drop</button>
+      </div>
     </div>
     <div class="site">
       <p>実際にコードを書いてみよう</p>
@@ -51,18 +53,54 @@ export default {
 
 <style>
 .lastpageview {
+  background-image: url(@/assets/森１.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  color: yellow;
+  text-align: justify;
+  text-justify: auto;
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-family: "Sacramento", "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
+.page {
+  color: black;
+  text-align: justify;
+  text-justify: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Sacramento", "Segoe UI", Tahoma, Verdana, sans-serif;
+}
 .pagelink {
+  color: black;
   display: flex;
   height: 2em;
-  width: 400px;
+  width: 900px;
   padding: 1em;
+  justify-content: space-around;
+}
+
+.site {
+  color: black;
+  text-align: justify;
+  text-justify: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Sacramento", "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+.start {
+  color: black;
+  display: flex;
+  height: 2em;
+  width: 900px;
+  padding: 2em;
   justify-content: space-around;
 }
 </style>
