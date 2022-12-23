@@ -3,7 +3,7 @@
     <title>Question2</title>
     <h1 class="text1">パスワードを探せ</h1>
     <h2 class="text2">ヒント：(2^4-1)×10</h2>
-    <section>
+    <section class="box">
       <input
         type="number"
         placeholder="数字を入力"
@@ -13,16 +13,16 @@
       />
       <input type="range" min="0" max="1" step="0.1" v-model="alpha" />
     </section>
-    <section id="page3">
-      <label class="text3">解答欄<input type="text" size="40" /></label>
+    <section id="page3" class="sec1">
+      <label>解答欄<input type="text" size="40" /></label>
       <button v-on:click="next">回答</button>
       <div v-if="answer === 'mousemove'">
-        <h3 class="text4">正解!</h3>
+        <h3>正解!</h3>
         <button v-on:click="Page3commentaryView">次へ</button>
       </div>
     </section>
     <div class="app">
-      <p class="text5">
+      <p class="text3">
         rgba( {{ red }}, {{ green }}, {{ blue }}, {{ alpha }})
       </p>
       <div
@@ -114,18 +114,34 @@ export default {
 }
 .text1 {
   color: aquamarine;
+  text-align: center;
 }
 .text2 {
   color: aquamarine;
+  text-align: center;
 }
 .text3 {
   color: rgb(202, 81, 194);
+  text-align: center;
 }
 .text4 {
   color: aquamarine;
+  text-align: center;
 }
 .text5 {
   color: rgb(202, 81, 194);
+}
+.box {
+  text-align: center;
+}
+.bn1 {
+  text-align: center;
+}
+.bn2 {
+  text-align: center;
+}
+.sec1 {
+  text-align: center;
 }
 .app {
   display: flex;

@@ -144,6 +144,7 @@ export default {
 }
 .write1 {
   color: aquamarine;
+  text-align: center;
 }
 .answer_number {
   color: aquamarine;

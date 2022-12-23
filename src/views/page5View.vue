@@ -6,8 +6,9 @@
     <div id="count" class="count">
       <span class="text3" v-if="answer">
         <h2>正解!</h2>
-        <button v-on:click="Page5commentaryView">次へ</button> </span
-      >{{ num }}
+        <button v-on:click="Page5commentaryView">次へ</button>
+      </span>
+      <p class="num">{{ num }}</p>
     </div>
     <button v-on:click="plusbutton">+1</button>
     <button v-on:click="multipliedbutton">×2</button>
@@ -62,20 +63,25 @@ export default {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1200px;
+  width: 950px;
   height: 700px;
+  text-align: center;
 }
 .text1 {
   color: aquamarine;
+  text-align: center;
 }
 .text2 {
   color: aquamarine;
+  text-align: center;
 }
 .text3 {
   color: aquamarine;
+  text-align: center;
 }
 .num {
   color: aquamarine;
+  text-align: center;
 }
 .count {
   color: aquamarine;
