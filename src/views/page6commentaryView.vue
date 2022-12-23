@@ -9,6 +9,7 @@
       今回はVue.Draggableという拡張機能を使用し、<br />Draggable要素を追加することでドラッグアンドドロップの機能を実装している。
     </h3>
     <button v-on:click="LastPageView">次へ</button>
+    <img src="@/assets/page6com.png" width="730" height="370" />
   </div>
 </template>
 <script>

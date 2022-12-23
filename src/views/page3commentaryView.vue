@@ -5,7 +5,8 @@
     <h2 class="text2">
       ページ上でマウスを動かすと、 mousemove イベントが行われます。
     </h2>
-    <button v-on:click="page4">次へ</button>
+    <button class="btn" v-on:click="page4">次へ</button>
+    <img src="@/assets/page3com.png" width="730" height="370" />
   </div>
 </template>
 <script>
@@ -23,13 +24,17 @@ export default {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 968px;
-  height: 500px;
+  text-align: center;
 }
 .text1 {
   color: aquamarine;
+  text-align: center;
 }
 .text2 {
   color: aquamarine;
+  text-align: center;
+}
+.btn {
+  text-align: center;
 }
 </style>
